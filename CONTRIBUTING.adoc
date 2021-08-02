@@ -1,0 +1,80 @@
+= HiveMQ Community Contributing Guidelines
+
+== Introduction
+
+Anyone is welcome to participate and contribute to the HiveMQ open source community. We encourage people to use the Github issue tracker and create pull requests.
+
+We ask that contributions are focused on improving the current implementation and project scope.
+
+We will not accept contributions that would add features that expand the scope of the project. It is HiveMQ’s intention to offer commercial products that will add features suited for enterprise deployments of HiveMQ. If you would like to suggest a new feature, please contact the project team (support@hivemq.com) to discuss if it fits within the project scope. If you wish to contribute, we will preferably accept Bug Fixes, Typos, Documentation, JavaDoc and Logging.
+
+== Licensing
+
+HiveMQ Open Source Projects are released under the Apache 2.0 license to allow you the use of the software as you please. By contributing your code, you agree to license your contribution under the terms of the Apache License, Version 2.0.
+
+Please fill out our Contributor License Agreement (CLA), otherwise we cannot accept your contribution.
+
+All files must contain the license header from the link:HEADER[header file].
+
+== Contributor License Agreement
+If you wish to contribute to one of our Open Source projects, please download, fill out and sign the https://www.hivemq.com/downloads/Contributor_License_Agreement.pdf[Contributor License Agreement]. Send the signed agreement  to (contributing@hivemq.com) with the subject `CLA for Project: <Project Name>`. Please read this document carefully before signing it and keep a copy for your own records. Once we've received your signed CLA, you will be added to the list of contributors, and our HiveMQ Development Team will review your contributions.
+
+In case the rights to all intellectual property created by you are maintained by your employer, including your work on HiveMQ Open Source Projects, you must ensure you have retained all rights to grant the license, or that your employer has agreed to a separate https://www.hivemq.com/downloads/Corporate_Contributor_License_Agreement.pdf[Corporate CLA].
+
+== Contribution Guidelines
+
+=== Issues
+==== Bug Fixes and Minor Features
+
+Please always open an issue in the issue tracker before sending a pull request and wait until someone from the HiveMQ Development Team approves it, before you start working on it. This prevents you from working on issues that we will ultimately not accept. When you start working on an approved issue, please make it known in the comments that you are going to work on it, so a simultaneous contribution by someone else can be avoided.
+
+Upon commitment, your contribution will be reviewed by the HiveMQ Development Team. We reserve the right to release only reviewed and approved implementations.
+
+==== Security Issues
+
+Please do not report any security issue to the public issue tracker. Please send security issues to security@hivemq.com.
+
+=== Branching model
+
+- `master`: release branch, protected
+- `develop` is merged into `master` by creating a merge commit if a new version is released
+- The release is tagged with the version `vX.Y.Z`
+- `develop`: snapshot branch, protected
+- Contains features for the next release
+- Feature/bugfix/... branches are merged into `develop` by rebasing and merging
+- Every feature/bugfix/... will have its own branch
+- Branched off from `develop`
+- Pull request targeting the `develop` branch
+- Mandatory code review of the pull request
+- `gh-pages`: documentation branch, protected
+
+=== Branching guidelines
+
+- Branch types: feature, bugfix, improvement, cleanup (same as the label of a corresponding GitHub Issue)
+- Branch names:
+- Starting with type: `feature/`, `bugfix/`, `improvement/`, `cleanup/`
+- \+ task: lower case, spaces replaced with `-`
+
+=== Commit guidelines
+
+- Commits should be as atomic as possible.
+- Commit messages should describe the changes clearly.
+- Commit messages should start with a capital letter for consistency.
+- Commit messages should avoid exceeding the line length limit. Instead use multiple lines, each describing one specific
+change.
+
+==== Questions
+
+Please refer all your questions about the HiveMQ Open Source Projects to the https://community.hivemq.com[HiveMQ Community Forum].
+
+Issues consisting of questions or suggestions will be closed immediately.
+
+=== Testing
+
+The HiveMQ Open Source projects only accept pull requests that contain unit tests and have sufficient unit test coverage.
+
+=== Pull Requests
+
+As soon as your code is ready for a https://help.github.com/en/articles/creating-a-pull-request[pull request], please link the specific issue that you want to resolve. Once the continuous integration is successful and at least one member of the HiveMQ Development Team has approved the changes, you will be asked to rebase and squash before the pull request can be merged.
+
+We greatly appreciate your involvement and contribution.
